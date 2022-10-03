@@ -1,0 +1,272 @@
+<!-- !+enter, me genera lo basico de las lineas de abajo automaticamente -->
+<!DOCTYPE html>
+<!--Aclaro lenguaje español en este caso, puede ser en ingles tambien (en)-->
+<html lang="es">
+    <head class="header">
+    <title>Mercado Liebre</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Vuelve el sitio responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Las siguientes 3 etiquetas son de google fonts, son para setear tipografias, despues tengo que pegar el segundo link en la hoja styles.css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Link con iconos usados -->
+    <script src="https://kit.fontawesome.com/742f33a9bc.js" crossorigin="anonymous"></script>
+    <!-- Vinculo el archivo normalize que sirve para que la pagina se vea siempre bien -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- Vinculo con su propia hoja de estilo -->
+    <link rel="stylesheet" href="/css/registro.css">
+    <!-- Recomiendan esta hoja ultima -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header class="main-header">
+     <!-- Pongo la imagen -->
+     <div class="header-top">
+        <div>
+            <a href="/"><img class="logo" src="/images/logo-mercado-liebre.svg" alt="Logo"></a>
+        </div>
+        <!-- Creando, formulario -->
+        <form method="get" action="/" class="search">
+            <div class="box-buscador">
+                <input class="buscador" type="text" name="buscador" placeholder="Buscar productos, marcas..." required minlength="3" >
+                <div class="lupa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </form>
+        <!-- Agrego la mano con $ y el texto -->
+        <div class="titulo-compra">
+            <i class="fa-solid fa-hand-holding-dollar"></i> 
+            Comprá en cuotas y sin tarjetas de crédito
+        </div>
+    </div>
+    <!-- Armo una de las listas, el type le edita el simbolo -->
+    <div class="header-bottom">
+        <ul class="header-bottom-left">
+            <li ><a class="link" href="/ofertas">Ofertas</a></li>
+            <li><a class="link" href="/tiendasoficiales">Tiendas Oficiales</a></li>
+            <li><a class="link" href="/vender">Vender</a></li>
+            <li><a class="link" href="/ayuda">Ayuda</a></li>
+        </ul>
+        <!-- Hago otra lista, tiene iconos -->
+        <ul class="header-bottom-right">
+            <li><a class="link" href="/registro">Creá tu cuenta</a><i class="fa-regular fa-id-card icono-margen"></i></li>
+            <li><a class="link" href="/login">Ingresá</a><i class="fa-solid fa-right-to-bracket icono-margen"></i></li>
+            <li><a class="link" href="/miscompras">Mis compras</a><i class="fa-solid fa-basket-shopping icono-margen"></i></li>
+        </ul>
+        <!-- Armo un span y la lista para juntarlos y armar el fondo azul en css -->
+        <div class="burger-menu">
+            <i class="fas fa-bars icono.menu"></i>
+        </div>
+    </div>
+</header>
+<!-- Creando, formulario -->
+<form method="get" action="/" class="register">
+    <div class="register-top">
+        <!-- Armo un cuadrado con Nombre y apellido escrito dentro, para que el usuaio cargue sus datos -->
+        <!-- El name es la categoria del dato que va a recibir, el value es el valor que va recibir, el required es para pedir ese dato si o si  -->
+        <div>
+            <input class="box-data-entry" type="text" name="nombreCompleto" placeholder="Nombre y apellido" required minlength="3">
+        </div>
+        <div>
+            <input class="box-data-entry" type="text" name="nombreUsuario" placeholder="Nombre de usuario">
+        </div>
+        <div>
+            <input class="box-data-entry" type="text" name="email" placeholder="E-mail">
+        </div>
+            <label class="title-register">Fecha de nacimiento</label>
+            <input class="box-fecha" type="date" name="fechaDeNacimiento" min="1930-12-31" max="2020-12-31" placeholder="aaaa/mm/dd">
+            <div class="title-register">Perfil de usuario</div>
+            <div class="user-profile">
+                <input type="radio" name="perfilDelUsuario" value="Comprador">Comprador
+                <input type="radio" name="perfilDelUsuario" value="Vendedor">Vendedor
+            </div>
+    </div>
+    <div class="register-list">
+        <div class="title-register">Intereses</div>
+            <div class="checkbox-style">
+                <input type="checkbox" name="intereses" value="Electro">    Electro
+            </div>
+            <div class="checkbox-style">
+                <input type="checkbox" name="intereses" value="Moda">   Moda
+            </div>
+            <div class="checkbox-style">
+                <input type="checkbox" name="intereses" value="Hogar">  Hogar
+            </div>
+            <div class="checkbox-style">
+                <input type="checkbox" name="intereses" value="Jugueteria"> Juguetería
+            </div>
+            <div class="checkbox-style">
+                <input type="checkbox" name="intereses" value="VidaSana">   Vida Sana
+            </div>
+        </div>
+        <div class="user-picture">
+            <label class="title-register">Foto de usuario</label>
+            <input type="file" accept=".jpg">
+        </div>
+        <div>
+            <input class="box-data-entry" type="password" name="password" placeholder="Contraseña">
+        </div>
+        <div>
+            <input class="box-data-entry" type="password" name="password" placeholder="Confirmar contraseña">
+        </div>
+    </div>
+    <div class="button-register">
+        <button type="reset" class="reset-button">Borrar</button>
+        <input type="submit" class="submit-button"></input>
+    </div>
+    
+</form>    
+<main>
+        <div class="titulares">Basado en tu última visita</div>
+        <section class="listado-productos">
+            <!-- Mando una imagen, el alt es para comentarios, el src es la ubicacion relativa -->
+            <article class="caja-producto">
+                <img class="producto-imagen" src="/images/img-cafetera-moulinex.jpg" alt="Cafetera">
+                <div class="pie-de-imagen">
+                    <div class="separador-imagen-texto">
+                        <div class="camion"><i class="fa-solid fa-truck"></i></div>
+                    </div>
+                    <div class="precio-descuento">
+                        <div class="precios">$6.770</div>
+                        <div class="descuentos">40% OFF</div>
+                    </div>
+                    <div class="producto">Cafetera Moulinex</div>
+                </div>
+            </article>
+            <article class="caja-producto">
+                <img class="producto-imagen" src="/images/img-macbook-pro-2019.jpg" alt="MacBook">
+                <div class="pie-de-imagen">
+                    <div class="separador-imagen-texto">
+                        <div class="camion"><i class="fa-solid fa-truck"></i></div>
+                    </div>
+                    <div class="precio-descuento">
+                        <div class="precios">$230.000</div>
+                        <div class="descuentos">20% OFF</div>
+                    </div>
+                    <div class="producto">MacBook Pro 2019</div>
+            </div>
+        </article>
+        <article class="caja-producto">
+            <img class="producto-imagen" src="/images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy">
+            <div class="pie-de-imagen">
+                <div class="separador-imagen-texto">
+                    <div class="camion"><i class="fa-solid fa-truck"></i></div>
+                </div>
+                <div class="precio-descuento">
+                    <div class="precios">$70.500</div>
+                    <div class="descuentos">10% OFF</div>
+                </div>
+                <div class="producto">Samsung Galaxy S10</div>
+            </div>
+        </article>
+        <article class="caja-producto">
+            <img class="producto-imagen" src="/images/img-tv-samsung-smart.jpg" alt="SmartTV">
+            <div class="pie-de-imagen">
+                <div class="separador-imagen-texto">
+                    <div class="camion"><i class="fa-solid fa-truck"></i></div>
+                </div>
+                <div class="precio-descuento">
+                    <div class="precios">$23.200</div>
+                    <div class="descuentos">5% OFF</div>
+                </div>
+                <div class="producto">SmartTV Samsung 43"</div> 
+            </div>
+            </article>
+        </section>
+        <div class="titulares">Sección de Ofertas</div>
+        <section class="listado-productos">    
+            <article class="caja-producto">
+                <img class="producto-imagen" src="/images/img-cafetera-moulinex.jpg" alt="Cafetera">
+                <div class="pie-de-imagen">
+                    <div class="separador-imagen-texto">
+                        <div class="camion"><i class="fa-solid fa-truck"></i></div>
+                    </div>
+                    <div class="precio-descuento">
+                        <div class="precios">$6.770</div>
+                        <div class="descuentos">40% OFF</div>
+                    </div>
+                    <div class="producto">Cafetera Moulinex</div>
+                </div>
+            </article>
+            <article class="caja-producto">
+                <img class="producto-imagen" src="/images/img-macbook-pro-2019.jpg" alt="MacBook">
+                <div class="pie-de-imagen">
+                    <div class="separador-imagen-texto">
+                        <div class="camion"><i class="fa-solid fa-truck"></i></div>
+                    </div>
+                    <div class="precio-descuento">
+                        <div class="precios">$230.000</div>
+                        <div class="descuentos">20% OFF</div>
+                    </div>
+                    <div class="producto">MacBook Pro 2019</div>
+                </div>
+            </article>
+            <article class="caja-producto">
+                <img class="producto-imagen" src="/images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy">
+                <div class="pie-de-imagen">
+                    <div class="separador-imagen-texto">
+                        <div class="camion"><i class="fa-solid fa-truck"></i></div>
+                    </div>
+                    <div class="precio-descuento">
+                        <div class="precios">$70.500</div>
+                        <div class="descuentos">10% OFF</div>
+                    </div>
+                    <div class="producto">Samsung Galaxy S10</div>
+                </div>
+            </article>
+            <article class="caja-producto">
+                <img class="producto-imagen" src="/images/img-tv-samsung-smart.jpg" alt="SmartTV">
+                <div class="pie-de-imagen">
+                    <div class="separador-imagen-texto">
+                        <div class="camion"><i class="fa-solid fa-truck"></i></div>
+                    </div>
+                    <div class="precio-descuento">
+                        <div class="precios">$23.200</div>
+                        <div class="descuentos">5% OFF</div>
+                    </div>
+                    <div class="producto">SmartTV Samsung 43"</div>
+                </div>
+            </article>
+        </section>
+</main>
+<footer>
+    <section class="bloque-footer">
+        <article class="caja-individual-footer">
+            <div class="iconos-footer">
+                <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <div class="titulo-footer">Pagá con tarjeta o en efectivo</div>
+            <div>Con MercadoLiebreCash tenés cuotas sin interés
+                con tarjeta o efectivo en puntos de pago.
+                Y siempre es seguro!.
+            </div>
+        </article>
+        <article class="caja-individual-footer">
+            <div class="iconos-footer">
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div class="titulo-footer">Envío gratis desde los $2,500</div>
+            <div>Solo por estar registrado en Mercado Liebre
+                tenés envíos gratis en miles de productos.
+                Es un beneficio de Mercado Puntos.
+            </div>
+        </article>
+        <article class="caja-individual-footer">
+            <div class="iconos-footer">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <div class="titulo-footer">Seguridad de principio a fin</div>
+            <div>No te gusta? Devolvelo! En Mercado Liebre
+                no hay nada que no puedas hacer
+                porque estás siempre protegid@.
+            </div>
+        </article>
+    </section>
+        <div class="derechos"> Copyrigth © 1999-2020 MercadoLiebre S.R.L.</div>
+    </footer>
+</body>
+</html>

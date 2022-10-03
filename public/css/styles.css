@@ -1,0 +1,272 @@
+/* Paleta de colores::
+Amarillo: #EAC926; 
+Azul: #03264C; 
+Celeste: #1259c3; 
+Gris oscuro: #666; 
+Gris claro: #ebebeb; 
+Verde: #39b54a; */
+
+
+/*************** Generales ***************/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:#ebebeb;
+}
+main {
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    width: 90%;
+}
+header {
+    background-color: #eac926;
+    width: 100%;
+    top: 0;
+}
+footer {
+    text-align: center;
+}
+.titulares {
+    font-size: 24px;
+    padding: 10px;  
+}
+
+/*************** Header top ***************/
+.header-top{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+.logo {
+    width: 239px;
+    padding-bottom: 15px;
+}
+.box-buscador{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.buscador {
+    color: #979494;
+    background: white;
+    margin: auto;
+    border: 2px solid #979494;
+    width: 205px;
+    padding: 8px;
+    border-radius: 12px;
+    font-size: 14px;  
+}
+.lupa{
+    color: #979494;
+    position: relative;
+    right: 23px;
+}
+
+.titulo-compra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 325px;
+    padding: 15px;
+    font-size: 15px;
+}
+.burger-menu{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    background: #1259c3;
+    color: white;
+    padding: 8px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+/*************** Header bottom ***************/
+.header-bottom{
+    display:flex;
+    justify-content: space-between;
+    padding-left:15px;
+    padding-right:15px;
+}
+.header-bottom-left{
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+.header-bottom-right{
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding-right: 25px;
+}
+.link{
+    color:black;
+    text-decoration: none;
+    padding-right: 5px;
+}
+
+/*************** Banner ***************/
+.banner {
+    width:100%;
+    padding-top: 30px;
+    margin-bottom: -6px;
+}
+
+/*************** Main ***************/
+
+.caja-producto {
+    background-color: white;
+    margin: 10px;
+    padding: 10px 0px;
+    transition: all 300ms;
+}
+.producto-imagen{
+    width:230px;
+    padding: 5px;
+}
+.listado-productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.precios{
+    position: relative;
+    top: 10px;
+}
+.descuentos{
+    color:#5cb85c;
+    position: relative;
+    top: 10px;
+}
+.producto{
+    display: flex;
+    color: #979494;
+    padding: 5px;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    transition: all 900ms;
+}
+.separador-imagen-texto{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: relative;
+    border-top: solid 1px #ebebeb;
+}
+.camion{
+    font-size: 12px;
+    background: none;
+    position: relative;
+    color: #39b54a;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #5cb85c;
+    border-radius: 50%;
+    bottom: 14px;
+    transition: all 500ms;
+}
+article .fa-truck {
+    margin-top: 6px;
+   
+}
+
+/*************** Footer ***************/
+
+.bloque-footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.caja-individual-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    margin: 20px;
+}
+.iconos-footer{
+    font-size: 40px;
+    color: #1259c3;
+    transition: all 0.5s;
+}
+.titulo-footer{
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px;
+}
+.derechos{
+    display:flex;
+    justify-content: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+/********* Cambios con :hover *************/
+
+.iconos-footer :hover{
+    color:#39b54a;
+}
+
+/********* Navegacion Celulares *************/
+
+@media (min-width: 460px){
+   
+}
+
+/*************** Navegacion Tablets *********/
+
+@media (min-width: 769px){  
+    .burger-menu {
+        display: none;
+    }
+    li{
+        text-align: initial;
+        margin-left:30px;
+    }
+    ul {
+        display:flex;
+    }
+    .header-bottom-left{
+        display: flex;  
+    }
+    .header-bottom-right{
+        display: flex; 
+    }
+}
+/*************** Navegacion Desktop *********/
+
+@media (min-width: 1280px){
+    .titulo-compra{
+        padding-right: 30px;
+        width:340px;
+    }
+    .logo{
+        padding-left: 10px;
+    }
+    .producto{
+        display:none;
+    }
+    .caja-producto:hover{
+       box-shadow: 0px 0px 10px rgb(100,100,100);
+    }
+
+    .caja-producto:hover .camion{
+        transform: rotate(-90deg);
+    }
+    .caja-producto:hover .producto{
+        display: flex;
+        flex-direction: row;
+    }
+
+}
